@@ -177,7 +177,12 @@
     </section>
 
     <footer>
-        <span>Public repositories only</span><span>Powered by GitHub</span>
+        <span>Public repositories only</span>
+        <span class="footer-credit"
+            >Developed by <strong>Joey Cadieux</strong>
+            <span class="heart" aria-hidden="true">♥</span> Built with love</span
+        >
+        <span>Powered by GitHub</span>
     </footer>
 </main>
 
@@ -632,9 +637,30 @@
     footer {
         display: flex;
         justify-content: space-between;
+        align-items: center;
+        gap: 18px;
         padding: 20px 36px 28px;
         color: #92988f;
         border-top: 1px solid #d9d7ce;
+    }
+    .footer-credit {
+        color: #68716b;
+        text-align: center;
+    }
+    .footer-credit strong {
+        color: #202b27;
+    }
+    .heart {
+        display: inline-block;
+        margin: 0 2px;
+        color: #e05d44;
+        font-size: 13px;
+    }
+    .dark-mode .footer-credit {
+        color: #9eb2c2;
+    }
+    .dark-mode .footer-credit strong {
+        color: #edf3f6;
     }
     @keyframes spin {
         to {
@@ -685,6 +711,9 @@
         footer {
             gap: 20px;
             flex-direction: column;
+        }
+        .footer-credit {
+            order: -1;
         }
     }
 </style>
